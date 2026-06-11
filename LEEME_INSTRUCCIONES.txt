@@ -1,0 +1,36 @@
+╔══════════════════════════════════════════════════════════════════╗
+║          PROYECTO ORNIS v4.0 — INSTRUCCIONES DE INSTALACIÓN     ║
+╠══════════════════════════════════════════════════════════════════╣
+║  PASO 1 — Copiar carpeta                                         ║
+║  Mover la carpeta "Ornis" a:  htdocs/Ornis/  (XAMPP)           ║
+║  O al directorio www de tu servidor local                        ║
+╠══════════════════════════════════════════════════════════════════╣
+║  PASO 2 — Base de datos (phpMyAdmin)                             ║
+║  1. Crear BD: ornis_db  (utf8mb4_unicode_ci)                     ║
+║  2. Ejecutar: database/esquema.sql  (tablas base)                ║
+║  3. Ejecutar: database/esquema_patch.sql  (columnas extra)       ║
+║  4. Ejecutar: database/esquema_patch_v2.sql  (is_public etc.)    ║
+║  5. Visitar:  http://localhost/Ornis/database/importar.php       ║
+║     → Importa taxonomía eBird (~17890 especies) para             ║
+║       el autocompletado del buscador de aves                     ║
+╠══════════════════════════════════════════════════════════════════╣
+║  PASO 3 — Credenciales BD (si es necesario)                      ║
+║  Editar: config/conexion.php                                     ║
+║  Cambiar DB_USER / DB_PASS según tu configuración local          ║
+╠══════════════════════════════════════════════════════════════════╣
+║  PASO 4 — Acceder                                                ║
+║  http://localhost/Ornis/                                         ║
+║  Registro: http://localhost/Ornis/auth.php                       ║
+╠══════════════════════════════════════════════════════════════════╣
+║  NOVEDADES v4.0                                                  ║
+║  ✅ Modo Oscuro/Claro con paleta Momotus aequatorialis           ║
+║  ✅ Login/Registro rediseñado — autenticación corregida          ║
+║  ✅ GPS autocompleta nombre del lugar + coordenadas              ║
+║  ✅ Buscador de aves con autocomplete desde BD taxonomía         ║
+║  ✅ Mapa inicio ampliado con 10 zonas interactivas               ║
+║  ✅ Galería con accordion, filtros avanzados, chips, modal       ║
+║  ✅ Formulario de registro con marca de agua logo                ║
+║  ✅ Texto visible en inputs en ambos modos claro/oscuro          ║
+║  ✅ Dashboard con sidebar, stats y tabla de avistamientos        ║
+║  ✅ Galería privada con toggle publicar/privado por foto         ║
+╚══════════════════════════════════════════════════════════════════╝

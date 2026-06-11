@@ -1,0 +1,51 @@
+═══════════════════════════════════════════════════════════════
+  ORNIS v5 — Instrucciones de instalación
+  Plataforma de observación de aves · UAC Cusco
+═══════════════════════════════════════════════════════════════
+
+REQUISITOS:
+  - XAMPP (PHP 8.x + MySQL 8.0)
+  - Navegador moderno
+
+PASOS:
+
+1. CARPETA
+   Copia la carpeta completa a: htdocs/Ornis/
+
+2. BASE DE DATOS (phpMyAdmin)
+   a) Crea una BD llamada: ornis_db
+   b) Importa: database/esquema.sql  (tablas base)
+   c) Importa: database/esquema_patch_v3.sql  (tablas listas + columnas nuevas)
+
+3. CSVS DE EBIRD
+   Coloca en database/data/:
+   - eBird_Taxonomy.csv  (taxonomía oficial, ~33 000 especies)
+   - MyEBirdData.csv     (tus observaciones exportadas)
+   Luego abre en el navegador: http://localhost/Ornis/database/importar.php
+
+4. CONEXIÓN
+   Edita config/conexion.php si tu usuario/contraseña MySQL es diferente.
+   Por defecto: root / (sin contraseña)
+
+5. ACCEDER
+   http://localhost/Ornis/index.php
+   
+   Usuarios demo (contraseña: ornis2026):
+   - denis@ornis.com  (admin)
+   - maria@ornis.com  (observador)
+   - carlos@ornis.com (observador)
+
+═══════════════════════════════════════════════════════════════
+  NOVEDADES v5
+═══════════════════════════════════════════════════════════════
+
+  ✅ Logo oficial (ornisLogo.png) en todos los navbar
+  ✅ Mapa redimensionado + sidebar "Top Lugares" desde BD
+  ✅ Formulario de registro estilo eBird (paleta de colores correcta)
+  ✅ GPS rellena latitud, longitud Y nombre del lugar automáticamente
+  ✅ Buscador de especies busca en la BD (taxonomía eBird 33k+)
+  ✅ CRUD completo de Listas de avistamiento (crear, ver, editar, eliminar)
+  ✅ Cada lista permite agregar múltiples especies con conteo individual
+  ✅ dashboard con enlace a "Mis Listas"
+  ✅ navbar actualizado en todas las páginas
+  ✅ importar.php corregido para leer correctamente eBird_Taxonomy.csv 2025
